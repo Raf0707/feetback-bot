@@ -4,9 +4,6 @@ import os
 
 app = Flask(__name__)
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-
 HTML_FORM = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -15,20 +12,30 @@ HTML_FORM = '''
     <title>Form Submission</title>
 </head>
 <body>
-    <h2>Form 1</h2>
+    <h2>Форма 1</h2>
     <form action="/submit" method="post">
         <input type="hidden" name="form" value="form1">
-        Name: <input type="text" name="name"><br>
-        Email: <input type="email" name="email"><br>
-        <input type="submit" value="Submit Form 1">
+        <label>Ваше имя*:</label>
+        <input type="text" name="full_name" placeholder="Введите ваше имя"><br>
+        <label>Контактные данные (WhatsApp/Telegram)*:</label>
+        <input type="text" name="contact" placeholder="@username или номер телефона"><br>
+        <label>Комментарий*:</label>
+        <textarea name="comment" placeholder="Введите комментарий"></textarea><br>
+        <input type="submit" value="Отправить форму 1">
     </form>
+
     <hr>
-    <h2>Form 2</h2>
+
+    <h2>Форма 2</h2>
     <form action="/submit" method="post">
         <input type="hidden" name="form" value="form2">
-        Username: <input type="text" name="username"><br>
-        Message: <input type="text" name="message"><br>
-        <input type="submit" value="Submit Form 2">
+        <label>Ваше имя*:</label>
+        <input type="text" name="full_name" placeholder="Введите ваше имя"><br>
+        <label>Контактные данные (WhatsApp/Telegram)*:</label>
+        <input type="text" name="contact" placeholder="@username или номер телефона"><br>
+        <label>Комментарий*:</label>
+        <textarea name="comment" placeholder="Введите комментарий"></textarea><br>
+        <input type="submit" value="Отправить форму 2">
     </form>
 </body>
 </html>
@@ -42,7 +49,7 @@ def home():
 def submit():
     form_type = request.form.get("form")
     data = request.form.to_dict()
-    message = f"New submission from {form_type}:\n" + "\n".join([f"{k}: {v}" for k, v in data.items() if k != "form"])
+    message = f"Новая заявка с {form_type}:\n" + "\n".join([f"{k}: {v}" for k, v in data.items() if k != "form"])
 
     if form_type == "form1":
         token = os.getenv("TELEGRAM_BOT_TOKEN")
