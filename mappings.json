@@ -1,11 +1,21 @@
 {
   "form1": {
-    "description": "Форма заявки",
-    "fields": [
-      "full_name",
-      "contact",
-      "comment"
-    ],
+    "description": "Заявка с первой формы",
+    "fields": ["full_name", "contact", "comment"],
+    "placeholders": {
+      "full_name": "Введите ваше имя",
+      "contact": "@username или номер телефона",
+      "comment": "Введите комментарий"
+    },
+    "labels": {
+      "full_name": "Ваше имя*",
+      "contact": "Контактные данные (WhatsApp/Telegram)*",
+      "comment": "Комментарий*"
+    }
+  },
+  "form2": {
+    "description": "Заявка со второй формы",
+    "fields": ["full_name", "contact", "comment"],
     "placeholders": {
       "full_name": "Введите ваше имя",
       "contact": "@username или номер телефона",
