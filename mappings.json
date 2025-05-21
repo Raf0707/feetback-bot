@@ -1,1 +1,11 @@
+{
+  "form1": {
+    "description": "Main contact form",
+    "fields": ["name", "email"]
+  },
+  "form2": {
+    "description": "Support message form",
+    "fields": ["username", "message"]
+  }
+}
 
