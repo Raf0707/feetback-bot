@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Form Submission</title>
+    <title>Test API</title>
 </head>
 <body>
-    <h2>Form 1</h2>
+    <h2>Форма 1 (тест)</h2>
     <form action="/submit" method="post">
         <input type="hidden" name="form" value="form1">
-        Name: <input type="text" name="name"><br>
-        Email: <input type="email" name="email"><br>
-        <input type="submit" value="Submit Form 1">
+        Ваше имя*: <input type="text" name="full_name" placeholder="Введите ваше имя"><br>
+        Контакт*: <input type="text" name="contact" placeholder="@username или номер телефона"><br>
+        Комментарий*: <textarea name="comment" placeholder="Введите комментарий"></textarea><br>
+        <input type="submit" value="Отправить форму 1">
     </form>
     <hr>
-    <h2>Form 2</h2>
+    <h2>Форма 2 (тест)</h2>
     <form action="/submit" method="post">
         <input type="hidden" name="form" value="form2">
-        Username: <input type="text" name="username"><br>
-        Message: <input type="text" name="message"><br>
-        <input type="submit" value="Submit Form 2">
+        Ваше имя*: <input type="text" name="full_name" placeholder="Введите ваше имя"><br>
+        Контакт*: <input type="text" name="contact" placeholder="@username или номер телефона"><br>
+        Комментарий*: <textarea name="comment" placeholder="Введите комментарий"></textarea><br>
+        <input type="submit" value="Отправить форму 2">
     </form>
 </body>
 </html>
