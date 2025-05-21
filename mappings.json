@@ -1,11 +1,20 @@
 {
   "form1": {
-    "description": "Main contact form",
-    "fields": ["name", "email"]
-  },
-  "form2": {
-    "description": "Support message form",
-    "fields": ["username", "message"]
+    "description": "Форма заявки",
+    "fields": [
+      "full_name",
+      "contact",
+      "comment"
+    ],
+    "placeholders": {
+      "full_name": "Введите ваше имя",
+      "contact": "@username или номер телефона",
+      "comment": "Введите комментарий"
+    },
+    "labels": {
+      "full_name": "Ваше имя*",
+      "contact": "Контактные данные (WhatsApp/Telegram)*",
+      "comment": "Комментарий*"
+    }
   }
 }
-
