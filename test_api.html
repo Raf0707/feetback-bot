@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submission</title>
+</head>
+<body>
+    <h2>Form 1</h2>
+    <form action="/submit" method="post">
+        <input type="hidden" name="form" value="form1">
+        Name: <input type="text" name="name"><br>
+        Email: <input type="email" name="email"><br>
+        <input type="submit" value="Submit Form 1">
+    </form>
+    <hr>
+    <h2>Form 2</h2>
+    <form action="/submit" method="post">
+        <input type="hidden" name="form" value="form2">
+        Username: <input type="text" name="username"><br>
+        Message: <input type="text" name="message"><br>
+        <input type="submit" value="Submit Form 2">
+    </form>
+</body>
+</html>
