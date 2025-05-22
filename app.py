@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify, render_template_string
 import requests
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 HTML_FORM = '''
 <!DOCTYPE html>
